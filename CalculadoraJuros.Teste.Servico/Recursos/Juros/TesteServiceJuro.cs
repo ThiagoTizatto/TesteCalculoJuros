@@ -34,7 +34,7 @@ namespace CalculadoraJuros.Teste.Servico.Recursos.Juros
             double valorFinal = 105.10;
             double valorRetornado = 0;
             //Ação
-            Action act = () =>_service.CalculaJuros(_juro);
+            Action act = () => _service.CalculaJuros(_juro);
             valorRetornado = _service.CalculaJuros(_juro);
             //Validação
 
