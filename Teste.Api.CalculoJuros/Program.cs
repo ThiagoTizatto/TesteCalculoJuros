@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace CalculadoraJuros.Api.Juros
+namespace CalculadoraJuros.Api.CalculoJuros
 {
     public class Program
     {
