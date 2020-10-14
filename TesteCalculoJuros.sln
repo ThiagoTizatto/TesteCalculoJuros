@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Api.Juros", "Teste.Api.Juros\CalculadoraJuros.Api.Juros.csproj", "{75580825-2567-4A9B-9B58-C42422D7A0BB}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - API", "1 - API", "{22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Servico", "2 - Servico", "{33F86792-7C4D-4B0A-B8D7-66A365F3E407}"
@@ -13,17 +11,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Dominio", "3 - Dominio"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Testes", "4 - Testes", "{B7C59124-24AE-4383-B0DE-E226D1BE9888}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Api.CalculoJuros", "Teste.Api.CalculoJuros\CalculadoraJuros.Api.CalculoJuros.csproj", "{7FAFEB48-CB64-4C93-8785-0A2426164F28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Dominio", "CalculadoraJuros.Dominio\CalculadoraJuros.Dominio.csproj", "{F9812299-5E26-4680-9B75-E83F321103C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Servico", "Teste.Servico\CalculadoraJuros.Servico.csproj", "{2F3A8DDA-6E32-4DAE-A17C-361ECB0F6981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Teste.Api", "CalculadoraJuros.Teste.Api\CalculadoraJuros.Teste.Api.csproj", "{2AF7C89A-165E-4170-BFDE-3349D145EDAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Dominio", "CalculadoraJuros.Dominio\CalculadoraJuros.Dominio.csproj", "{F9812299-5E26-4680-9B75-E83F321103C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Teste.Servico", "CalculadoraJuros.Teste.Servico\CalculadoraJuros.Teste.Servico.csproj", "{D59349E6-FACE-4E27-A2CD-53A6C406C70C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Teste.Api", "CalculadoraJuros.Teste.Api\CalculadoraJuros.Teste.Api.csproj", "{2AF7C89A-165E-4170-BFDE-3349D145EDAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Teste.Dominio", "CalculadoraJuros.Teste.Dominio\CalculadoraJuros.Teste.Dominio.csproj", "{1639557B-75AD-471D-8192-81FD576B7AD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Teste.Servico", "CalculadoraJuros.Teste.Servico\CalculadoraJuros.Teste.Servico.csproj", "{D59349E6-FACE-4E27-A2CD-53A6C406C70C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Api.Juros", "CalculadoraJuros.Api.Juros\CalculadoraJuros.Api.Juros.csproj", "{94E38867-A2EC-49D8-A83E-C73D699B11AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Teste.Dominio", "CalculadoraJuros.Teste.Dominio\CalculadoraJuros.Teste.Dominio.csproj", "{1639557B-75AD-471D-8192-81FD576B7AD9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.APi.CalculoJuros", "CalculadoraJuros.APi.CalculoJuros\CalculadoraJuros.APi.CalculoJuros.csproj", "{306EC7D0-450D-44A4-A4DC-B9189BF927C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Servico", "CalculadoraJuros.Servico\CalculadoraJuros.Servico.csproj", "{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,18 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{75580825-2567-4A9B-9B58-C42422D7A0BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{75580825-2567-4A9B-9B58-C42422D7A0BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{75580825-2567-4A9B-9B58-C42422D7A0BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{75580825-2567-4A9B-9B58-C42422D7A0BB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FAFEB48-CB64-4C93-8785-0A2426164F28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FAFEB48-CB64-4C93-8785-0A2426164F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FAFEB48-CB64-4C93-8785-0A2426164F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FAFEB48-CB64-4C93-8785-0A2426164F28}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F3A8DDA-6E32-4DAE-A17C-361ECB0F6981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F3A8DDA-6E32-4DAE-A17C-361ECB0F6981}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F3A8DDA-6E32-4DAE-A17C-361ECB0F6981}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F3A8DDA-6E32-4DAE-A17C-361ECB0F6981}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F9812299-5E26-4680-9B75-E83F321103C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F9812299-5E26-4680-9B75-E83F321103C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9812299-5E26-4680-9B75-E83F321103C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -59,18 +47,30 @@ Global
 		{1639557B-75AD-471D-8192-81FD576B7AD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1639557B-75AD-471D-8192-81FD576B7AD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1639557B-75AD-471D-8192-81FD576B7AD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94E38867-A2EC-49D8-A83E-C73D699B11AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E38867-A2EC-49D8-A83E-C73D699B11AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E38867-A2EC-49D8-A83E-C73D699B11AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E38867-A2EC-49D8-A83E-C73D699B11AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{75580825-2567-4A9B-9B58-C42422D7A0BB} = {22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}
-		{7FAFEB48-CB64-4C93-8785-0A2426164F28} = {22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}
-		{2F3A8DDA-6E32-4DAE-A17C-361ECB0F6981} = {33F86792-7C4D-4B0A-B8D7-66A365F3E407}
 		{F9812299-5E26-4680-9B75-E83F321103C6} = {06A880F4-ADD4-4BD1-9D90-717FA434C49E}
 		{2AF7C89A-165E-4170-BFDE-3349D145EDAC} = {B7C59124-24AE-4383-B0DE-E226D1BE9888}
 		{D59349E6-FACE-4E27-A2CD-53A6C406C70C} = {B7C59124-24AE-4383-B0DE-E226D1BE9888}
 		{1639557B-75AD-471D-8192-81FD576B7AD9} = {B7C59124-24AE-4383-B0DE-E226D1BE9888}
+		{94E38867-A2EC-49D8-A83E-C73D699B11AA} = {22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}
+		{306EC7D0-450D-44A4-A4DC-B9189BF927C3} = {22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}
+		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4} = {33F86792-7C4D-4B0A-B8D7-66A365F3E407}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28F6A57B-04E2-4B4D-B5CD-286FD05A8221}
