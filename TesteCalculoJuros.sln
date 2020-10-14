@@ -19,11 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Teste.Serv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Teste.Dominio", "CalculadoraJuros.Teste.Dominio\CalculadoraJuros.Teste.Dominio.csproj", "{1639557B-75AD-471D-8192-81FD576B7AD9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Api.Juros", "CalculadoraJuros.Api.Juros\CalculadoraJuros.Api.Juros.csproj", "{94E38867-A2EC-49D8-A83E-C73D699B11AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Api.Juros", "CalculadoraJuros.Api.Juros\CalculadoraJuros.Api.Juros.csproj", "{94E38867-A2EC-49D8-A83E-C73D699B11AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.APi.CalculoJuros", "CalculadoraJuros.APi.CalculoJuros\CalculadoraJuros.APi.CalculoJuros.csproj", "{306EC7D0-450D-44A4-A4DC-B9189BF927C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.APi.CalculoJuros", "CalculadoraJuros.APi.CalculoJuros\CalculadoraJuros.APi.CalculoJuros.csproj", "{306EC7D0-450D-44A4-A4DC-B9189BF927C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Servico", "CalculadoraJuros.Servico\CalculadoraJuros.Servico.csproj", "{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculadoraJuros.Servico", "CalculadoraJutos.Servico\CalculadoraJuros.Servico.csproj", "{B6D4A0CD-9AC1-4427-96CB-93796F36872A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraJuros.Teste.Comum", "Calculadora.Teste.Comum\CalculadoraJuros.Teste.Comum.csproj", "{A115F3D5-8012-4A44-9AD5-8C788BFC0C06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,10 +57,14 @@ Global
 		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{306EC7D0-450D-44A4-A4DC-B9189BF927C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6D4A0CD-9AC1-4427-96CB-93796F36872A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6D4A0CD-9AC1-4427-96CB-93796F36872A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6D4A0CD-9AC1-4427-96CB-93796F36872A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6D4A0CD-9AC1-4427-96CB-93796F36872A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A115F3D5-8012-4A44-9AD5-8C788BFC0C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A115F3D5-8012-4A44-9AD5-8C788BFC0C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A115F3D5-8012-4A44-9AD5-8C788BFC0C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A115F3D5-8012-4A44-9AD5-8C788BFC0C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,7 +76,8 @@ Global
 		{1639557B-75AD-471D-8192-81FD576B7AD9} = {B7C59124-24AE-4383-B0DE-E226D1BE9888}
 		{94E38867-A2EC-49D8-A83E-C73D699B11AA} = {22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}
 		{306EC7D0-450D-44A4-A4DC-B9189BF927C3} = {22BFA238-1131-4CCA-AD9A-4C27F2B8FE2E}
-		{67D45D95-C5B6-4849-9D5A-4B0F7BC68FB4} = {33F86792-7C4D-4B0A-B8D7-66A365F3E407}
+		{B6D4A0CD-9AC1-4427-96CB-93796F36872A} = {33F86792-7C4D-4B0A-B8D7-66A365F3E407}
+		{A115F3D5-8012-4A44-9AD5-8C788BFC0C06} = {B7C59124-24AE-4383-B0DE-E226D1BE9888}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28F6A57B-04E2-4B4D-B5CD-286FD05A8221}

@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CalculadoraJuros.Teste.Dominio.Inicializador
+namespace CalculadoraJuros.Teste.Comum.Inicializador
 {
     [TestFixture]
     public abstract class TesteBase
