@@ -30,7 +30,7 @@ namespace CalculadoraJuros.Teste.Servico.Recursos.Juros
         {
             //Cenario
             _juro = JuroObjetoPadrao.Padrao;
-            double valor = 0;
+        
             double valorFinal = 105.10;
             double valorRetornado = 0;
             //Ação

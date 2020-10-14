@@ -4,6 +4,7 @@ using CalculadoraJuros.Dominio.Entidades.Taxas;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CalculadoraJuros.Servico.Recursos.Juros
 {
@@ -12,8 +13,8 @@ namespace CalculadoraJuros.Servico.Recursos.Juros
         public double CalculaJuros(Juro juro)
         {
             juro.Validar();
-            return juro.ValorFinal();
-
+            var valorFinal =  juro.ValorFinal();
+            return valorFinal;
         }
 
         public Taxa ObterTaxa(Taxa taxa)

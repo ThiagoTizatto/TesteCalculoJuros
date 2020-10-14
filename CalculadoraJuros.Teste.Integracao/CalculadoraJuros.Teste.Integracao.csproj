@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -8,14 +8,14 @@
 
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="5.10.3" />
-    <PackageReference Include="Moq" Version="4.14.7" />
+    <PackageReference Include="Microsoft.AspNetCore.TestHost" Version="3.1.9" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.16.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CalculadoraJuros.Api.Juros\CalculadoraJuros.Api.Juros.csproj" />
+    <ProjectReference Include="..\CalculadoraJuros.APi.CalculoJuros\CalculadoraJuros.APi.CalculoJuros.csproj" />
     <ProjectReference Include="..\CalculadoraJuros.Teste.Comum\CalculadoraJuros.Teste.Comum.csproj" />
   </ItemGroup>
 

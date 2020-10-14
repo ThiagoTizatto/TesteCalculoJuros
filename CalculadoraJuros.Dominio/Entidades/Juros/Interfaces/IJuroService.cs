@@ -7,9 +7,9 @@ namespace CalculadoraJuros.Dominio.Entidades.Juros.Interfaces
 {
     public interface IJuroService
     {
-        public Taxa ObterTaxa(Taxa Taxa);
+        Taxa ObterTaxa(Taxa Taxa);
 
-        public double CalculaJuros(Juro juro);
+        double CalculaJuros(Juro juro);
 
 
     }
