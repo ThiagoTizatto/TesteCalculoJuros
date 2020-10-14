@@ -1,9 +1,9 @@
-﻿using CalculadoraJuros.Teste.Dominio.ObjetoPadrao;
+﻿using CalculadoraJuros.Teste.Comum.ObjetoPadrao;
 using NUnit.Framework;
 using System;
 using FluentAssertions;
 using CalculadoraJuros.Dominio.Entidades.Taxas.Excecoes;
-using CalculadoraJuros.Teste.Dominio.Inicializador;
+using CalculadoraJuros.Teste.Comum.Inicializador;
 using CalculadoraJuros.Dominio.Entidades.Taxas;
 
 namespace CalculadoraJuros.Teste.Dominio.Recursos

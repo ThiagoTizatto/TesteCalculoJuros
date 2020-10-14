@@ -1,6 +1,6 @@
 ﻿using CalculadoraJuros.Dominio.Entidades.Taxas;
 
-namespace CalculadoraJuros.Teste.Dominio.ObjetoPadrao
+namespace CalculadoraJuros.Teste.Comum.ObjetoPadrao
 {
 
         public static class TaxaObjetoPadrao
