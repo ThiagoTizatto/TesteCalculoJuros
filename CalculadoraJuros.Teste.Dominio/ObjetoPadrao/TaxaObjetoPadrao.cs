@@ -11,7 +11,7 @@ namespace CalculadoraJuros.Teste.Dominio.ObjetoPadrao
                 {
                     var taxaPadrao = new Taxa()
                     {
-                        Valor = 0.1
+                        Valor = 0.01
                     };
 
                     return taxaPadrao;
@@ -22,12 +22,12 @@ namespace CalculadoraJuros.Teste.Dominio.ObjetoPadrao
         {
             get
             {
-                var taxaPadrao = new Taxa()
+                var taxa = new Taxa()
                 {
-                    Valor =  - 0.1
+                    Valor =  - 0.01
                 };
 
-                return taxaPadrao;
+                return taxa;
             }
         }
 

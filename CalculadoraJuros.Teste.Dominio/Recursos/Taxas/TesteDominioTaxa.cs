@@ -8,7 +8,7 @@ using CalculadoraJuros.Dominio.Entidades.Taxas;
 
 namespace CalculadoraJuros.Teste.Dominio.Recursos
 {
-    [TestFixture]
+
     public class TesteDominioTaxa : TesteBase
     {
         private Taxa _taxa;
