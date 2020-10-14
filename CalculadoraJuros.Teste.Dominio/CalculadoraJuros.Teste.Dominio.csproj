@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Calculadora.Teste.Comum\CalculadoraJuros.Teste.Comum.csproj" />
     <ProjectReference Include="..\CalculadoraJuros.Dominio\CalculadoraJuros.Dominio.csproj" />
+    <ProjectReference Include="..\CalculadoraJuros.Teste.Comum\CalculadoraJuros.Teste.Comum.csproj" />
   </ItemGroup>
 
 </Project>
