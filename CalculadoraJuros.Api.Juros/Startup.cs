@@ -12,24 +12,19 @@ namespace CalculadoraJuros.Api.Juros
     {
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            _configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration _configuration { get; }
 
 
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
 
-
             services.ResolveDependencias();
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Teste Juros", Version = "v1", });
-
-            });
+            services.ConfigSwagger();
 
         }
 

@@ -18,16 +18,19 @@ namespace CalculadoraJuros.Api.Juros.Controllers
     public class JurosController : ControllerBase
     {
 
-        private IJuroService _service;
+        private readonly IJuroService _service;
         public JurosController(IJuroService service)
         {
             _service = service;
         }
 
+        /// <summary>
+        /// Busca o valor da Taxa
+        /// </summary>
+        /// <returns>Retorna o valor de 0.01 que está fixo para taxa</returns>
         [HttpGet("taxaJuros")]
         public ActionResult<double> ObterTaxa()
         {
-           
             try
             {
                 var resultado = _service.ObterTaxa(new Taxa { Valor = TaxaConfig.Valor });
@@ -38,6 +41,15 @@ namespace CalculadoraJuros.Api.Juros.Controllers
             {
 
                 return BadRequest(e.Message);
+            }
+            catch (Exception e)
+            {
+
+                return BadRequest(new
+                {
+                    errorMessage = e.Message,
+                    stackTrace = e.InnerException.StackTrace
+                });
             }
 
         }

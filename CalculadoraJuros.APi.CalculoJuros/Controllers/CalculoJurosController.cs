@@ -25,12 +25,17 @@ namespace CalculadoraJuros.APi.CalculoJuros.Controllers
             _requisicao = requisicao;
         }
 
+        /// <summary>
+        /// Calcula o juros
+        /// </summary>
+        /// <returns>Retorna o resultado do calculo: Valor Inicial * (1 + juros) ^ Tempo</returns>
+        /// <param name="valorInicial"></param>  
+        /// <param name="meses"></param>  
         [HttpGet("calculajuros")]
         public ActionResult<Juro> CalculaJuros([FromQuery] double valorInicial, [FromQuery] int meses)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
-
 
             try
             {
@@ -47,9 +52,21 @@ namespace CalculadoraJuros.APi.CalculoJuros.Controllers
 
                 return BadRequest(e.Message);
             }
+            catch (Exception e)
+            {
+
+                return BadRequest(new
+                {
+                    errorMessage = e.Message,
+                    stackTrace = e.InnerException.StackTrace
+                });
+            }
 
         }
-
+        /// <summary>
+        /// Busca o endereço no github
+        /// </summary>
+        /// <returns>Retorna o endereço no github</returns>
         [HttpGet("showmethecode")]
         public ActionResult<string> MostrarCodigo()
         {
@@ -63,12 +80,11 @@ namespace CalculadoraJuros.APi.CalculoJuros.Controllers
                 Meses = meses,
                 ValorInicial = valorInicial
             };
-            
 
             juro.Taxa = new Taxa() { Valor = await _requisicao.ObterTaxa() };
             return juro;
         }
 
-     
+
     }
 }

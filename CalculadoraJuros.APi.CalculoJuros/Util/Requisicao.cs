@@ -24,9 +24,9 @@ namespace CalculadoraJuros.APi.CalculoJuros.Util
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response = await client.GetAsync(_appSettings.UrlAPI);
+
             if (response.IsSuccessStatusCode)
             {
-            
                 var taxa = JsonConvert.DeserializeObject<Taxa>((response.Content.ReadAsStringAsync().Result));
                 return taxa.Valor;
             }

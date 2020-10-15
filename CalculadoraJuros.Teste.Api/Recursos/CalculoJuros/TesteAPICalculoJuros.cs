@@ -64,7 +64,26 @@ namespace CalculadoraJuros.Teste.Api.Recursos.CalculoJuros
             _service.Verify(s => s.CalculaJuros(It.IsAny<Juro>()), Times.Once);
         }
 
-      
+
+        [Test]
+        public void CalculoJurosController_ShowMeTheCode_Deve_ser_OK()
+        {
+            // Arrange
+
+            var controller = ObterCalculoJurosController();
+
+            // Action
+            var retorno = controller.MostrarCodigo();
+            var valorRetornado = ((ObjectResult)retorno.Result).Value;
+
+
+            //Assert
+            valorRetornado.Should().Be("https://github.com/ThiagoTizatto/TesteCalculoJuros");
+            var resultado = retorno.Should().BeOfType<ActionResult<string>>();
+
+        }
+
+
     }
 
 

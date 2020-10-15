@@ -21,6 +21,7 @@ namespace CalculadoraJuros.Api.Juros
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseUrls("http://localhost:51947");
                 });
     }
 }

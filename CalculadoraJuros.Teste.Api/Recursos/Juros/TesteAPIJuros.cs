@@ -39,7 +39,7 @@ namespace CalculadoraJuros.Teste.Api.Recursos.Juros
 
             //Assert
             var resultado = retorno.Should().BeOfType<ActionResult<double>>().Subject;
-            //retorno.Result .Should().Be(TaxaObjetoPadrao.Padrao.Valor);
+          
             ((Taxa)((ObjectResult)retorno.Result).Value).Valor.Should().Be(TaxaObjetoPadrao.Padrao.Valor);
 
 
