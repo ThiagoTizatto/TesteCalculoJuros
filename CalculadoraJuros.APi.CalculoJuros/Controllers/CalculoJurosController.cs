@@ -6,6 +6,8 @@ using CalculadoraJuros.APi.CalculoJuros.Util;
 using CalculadoraJuros.Dominio.Entidades.Juros;
 using CalculadoraJuros.Dominio.Entidades.Juros.Interfaces;
 using CalculadoraJuros.Dominio.Entidades.Taxas;
+using CalculadoraJuros.Dominio.Entidades.Taxas.Excecoes;
+using CalculadoraJuros.Dominio.ExcecaoGenerica;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,15 +18,15 @@ namespace CalculadoraJuros.APi.CalculoJuros.Controllers
     public class CalculoJurosController : ControllerBase
     {
         private readonly IJuroService _service;
-        private readonly Requisicao _requisicao;
-        public CalculoJurosController(IJuroService service, Requisicao requisicao)
+        private readonly IRequisicao _requisicao;
+        public CalculoJurosController(IJuroService service, IRequisicao requisicao)
         {
             _service = service;
             _requisicao = requisicao;
         }
 
         [HttpGet("calculajuros")]
-        public ActionResult<Juro> GetJuros([FromQuery] double valorInicial, [FromQuery] int meses)
+        public ActionResult<Juro> CalculaJuros([FromQuery] double valorInicial, [FromQuery] int meses)
         {
             if (!ModelState.IsValid)
                 return BadRequest();
@@ -36,9 +38,11 @@ namespace CalculadoraJuros.APi.CalculoJuros.Controllers
 
                 var resutado = _service.CalculaJuros(juro);
 
+                juro.Validar();
+
                 return Ok(resutado);
             }
-            catch (Exception e)
+            catch (BusinessException e)
             {
 
                 return BadRequest(e.Message);
@@ -57,10 +61,11 @@ namespace CalculadoraJuros.APi.CalculoJuros.Controllers
             var juro = new Juro()
             {
                 Meses = meses,
-                Taxa = new Taxa() { Valor = await _requisicao.ObterTaxa() },
                 ValorInicial = valorInicial
             };
+            
 
+            juro.Taxa = new Taxa() { Valor = await _requisicao.ObterTaxa() };
             return juro;
         }
 

@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace CalculadoraJuros.APi.CalculoJuros
 {
@@ -31,7 +32,16 @@ namespace CalculadoraJuros.APi.CalculoJuros
             services.ResolveDependencias();
 
             var appSettingsSection = Configuration.GetSection("AppSettings");
+
             services.Configure<AppSettings>(appSettingsSection);
+
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Teste Calculo Juros", Version = "v1", });
+
+            });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,6 +61,14 @@ namespace CalculadoraJuros.APi.CalculoJuros
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(c =>
+            {
+                c.RoutePrefix = "swagger";
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
             });
         }
     }

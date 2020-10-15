@@ -21,6 +21,21 @@ namespace CalculadoraJuros.Teste.Comum.ObjetoPadrao
                 return juro;
             }
         }
+        public static Juro PadraoSemTaxa
+        {
+            get
+            {
+                var juro = new Juro()
+                {
+                    ValorInicial = 100,
+                    Meses = 5,
+                   
+                };
+
+                return juro;
+            }
+        }
+
 
         public static Juro ValorInicialNegativo
         {

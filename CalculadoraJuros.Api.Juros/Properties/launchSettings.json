@@ -17,6 +17,14 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
+    "IIS - Dev": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
     "CalculadoraJuros.Api.Juros": {
       "commandName": "Project",
       "launchBrowser": true,
@@ -29,7 +37,7 @@
     "Docker": {
       "commandName": "Docker",
       "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/api",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "publishAllPorts": true,
       "useSSL": true
     }

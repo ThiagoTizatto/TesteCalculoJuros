@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CalculadoraJuros.Api.Juros.Configuration;
 using CalculadoraJuros.Dominio.Entidades.Juros.Interfaces;
 using CalculadoraJuros.Dominio.Entidades.Taxas;
+using CalculadoraJuros.Dominio.ExcecaoGenerica;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -33,7 +34,7 @@ namespace CalculadoraJuros.Api.Juros.Controllers
 
                 return Ok(resultado);
             }
-            catch (Exception e)
+            catch (BusinessException e)
             {
 
                 return BadRequest(e.Message);

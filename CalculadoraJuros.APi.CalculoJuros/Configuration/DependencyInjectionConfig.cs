@@ -12,7 +12,7 @@ namespace CalculadoraJuros.APi.CalculoJuros.Configuration
 
             services.AddScoped<IJuroService, JuroService>();
 
-            services.AddScoped<Requisicao>();
+            services.AddScoped<IRequisicao,Requisicao>();
 
             return services;
         }

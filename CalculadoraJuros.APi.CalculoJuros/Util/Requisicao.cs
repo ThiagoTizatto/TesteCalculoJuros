@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CalculadoraJuros.APi.CalculoJuros.Util
 {
-    public class Requisicao
+    public class Requisicao : IRequisicao
     {
         private readonly AppSettings _appSettings;
         public Requisicao(IOptions<AppSettings> appSettings)
