@@ -34,7 +34,7 @@ namespace CalculadoraJuros.Dominio.Entidades.Juros
                 throw new MesesMaiorQueZeroException();
 
             if (Taxa == null)
-                throw new Exception("Taxa não pode ser nula");
+                throw new NullReferenceException("Taxa não pode ser nula");
 
 
         }
